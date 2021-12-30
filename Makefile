@@ -1,5 +1,5 @@
 #Makefile
-objects = main.o
+objects = main.o isKPeriodic.o
 
 .PHONY: all
 all: iskperiodic
@@ -7,7 +7,8 @@ all: iskperiodic
 iskperiodic: ${objects}
 	gcc -o iskperiodic ${objects} -lstdc++
 
-main.o:
+main.o: isKPeriodic.h
+isKPeriodic.o: isKPeriodic.h
 
 .PHONY: clean
 clean:
